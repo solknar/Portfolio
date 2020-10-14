@@ -4,11 +4,11 @@ html, body {
 
 @font-face {
     font-family: myCustomFont;
-    src: url(KaushanScript-Regular.ttf)
+    src: url(../KaushanScript-Regular.ttf)
 }
 
 body{
-    background-image: url(./images/formingIdeas.jpg);
+    background-image: url(../images/formingIdeas.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
 }
