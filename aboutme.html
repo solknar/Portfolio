@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
+    <style>
+        div.absolute {
+            position: absolute;
+            top: 80%;
+            right: 200px;
+            width: 800px;
+            height: 100px;
+}
+    </style>
     <script src="./script/jquery.js"></script>
     <script>$(function(){
         $("#firstH").hide();
@@ -12,6 +21,7 @@
         $("#firstH").fadeIn(2000);
         $("#secondH").fadeIn(3000);
         $("#thirdH").fadeIn(4000);
+        $("#randomFacts").fadeOut(10000);
     });</script>
     <title>Rodrigo Guerra's About Me</title>
 </head>
@@ -39,5 +49,6 @@
             <h2 class="about" id="thirdH">I love games and challenges and I'm constantly finding ways to improve.</h2>
         </div>
     </div>
+    <div class="absolute" id="randomFacts"><h2 class="about">Random Facts:<br>When I'm on a project, I can't stop thinking about it until its completed.</h2></div>
 </body>
 </html>
