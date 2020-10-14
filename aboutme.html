@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="./jquery.js"></script>
+    <script>$(function(){
+        $("#firstH").hide();
+        $("#secondH").hide();
+        $("#thirdH").hide();
+        $("#firstH").fadeIn(2000);
+        $("#secondH").fadeIn(3000);
+        $("#thirdH").fadeIn(4000);
+    });</script>
     <title>Rodrigo Guerra's About Me</title>
 </head>
 <body>
@@ -25,9 +34,9 @@
             <img src="./images/rodrigo1.jpg" alt="Rodrigo Standing" id="selfPic" width="500" style="float:left">
         </div>
         <div>
-            <h2 class="about">I'm a Software Developer with a focus on front end development.</h2>
-            <h2 class="about">I can help you build your website, debug your code or contribute to your ongoing project.</h2>
-            <h2 class="about">I love games and challenges and I'm constantly finding ways to improve.</h2>
+            <h2 class="about" id="firstH">I'm a Software Developer with a focus on front end development.</h2>
+            <h2 class="about" id="secondH">I can help you build your website, debug your code or contribute to your ongoing project.</h2>
+            <h2 class="about" id="thirdH">I love games and challenges and I'm constantly finding ways to improve.</h2>
         </div>
     </div>
 </body>
