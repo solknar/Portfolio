@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
+    <script src="./jquery.js"></script>
+    <title>Rodrigo Guerra's Portfolio</title>
+    <script>$(function(){
+        $("#ifNoCookie").hide();
+        $("#futureGreeting").hide();
+});</script>
+</head>
+<header>
+    <nav>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="aboutme.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contactme.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <div id="futureGreeting">
+        <h1> </h1>
+    </div>
+    
+<script>
+    if (document.cookie.indexOf('clientName') == -1) {
+    $(function(){
+        $("#ifNoCookie").fadeIn(1000);}
+    
+    );}
+    else {
+        currentName = getCookie();
+        var greetings2 = "<h1>Hi  "+currentName+". Nice to see you again. Please stay as long as you like.</h1>";
+        writeToPage(greetings2);
+        $(function(){
+        $("#futureGreeting").fadeIn(1000);
+});
+    }
+</script>
+    <br><br><br><br><br><br>
+    <!--This div is only shown if the user doesnt have a cookie yet-->
+    <div id="ifNoCookie">
+        <form>
+            <h2>Please tell me your name:</h2>
+            <input id="clientname" value=""><p></p>
+        </form>
+            <div class="center">
+                <button onclick="setName()">Enter</button>
+            </div>
+    </div>
+</body>
+</html>
