@@ -10,12 +10,7 @@
     <script src="./script/jquery.js"></script>
     <script>
         $( function() {
-        $("#datepicker").datepicker({
-            showOn: "button",
-            buttonImage: "images/calendar.gif",
-            buttonImageOnly: true,
-            buttonText: "Select date"
-        });
+        $("#datepicker").datepicker();
         } );
     </script>
     <title>Rodrigo Guerra's Contact Me</title>
@@ -36,23 +31,20 @@
     </header>
     <div>
         <h1>Contact Me</h1>
-        <form onsubmit="return false">
-            <input type="text" placeholder="Enter your last name" id="lastname">
+        <form action="mailto:avalon_211@hotmail.com" method="post" enctype="text/plain">
+            <input type="text" placeholder="Enter your last name" name="lastname" id="lastname">
             <br><br>
-            <input type="text" placeholder="Enter your first name" id="firstName">
+            <input type="text" placeholder="Enter your first name" name="name" id="firstName">
             <br><br>
-            <input type="email" placeholder="Enter your email" id="email">
+            <input type="email" placeholder="Enter your email" name="mail" id="email">
             <br><br>
-            <input type="password" placeholder="Enter password" id="password">   
-            <input type="password" placeholder="Enter password (check)" id="passwordCheck">
-            <br><br>
-            <p>Date: <input type="text" id="datepicker"></p>
-            <span>What is your question?</span>
+            <span>Please enter your message:</span>
             <br>
-            <textarea maxlengh="500" id="question" onkeyup="countChar(this)" rows="6"></textarea>
+            <textarea maxlength="500" id="question" name="comment" onkeyup="countChar(this)" rows="6" cols="80"></textarea>
             <div id="charNum"></div>
             <br><br>
-            <button onclick="sendContact();">Send contact</button>
+            <input type="submit" value="Send">
+            <input type="reset" value="Reset">
         </form>
     </div>
 </body>
